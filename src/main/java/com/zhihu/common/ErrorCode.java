@@ -13,7 +13,9 @@ public enum ErrorCode {
     RATE_LIMITED(10005, "请求过于频繁"),
     INTERNAL(10500, "内部错误"),
     USERNAME_TAKEN(20001, "用户名已被占用"),
-    BAD_CREDENTIALS(20002, "用户名或密码错误");
+    BAD_CREDENTIALS(20002, "用户名或密码错误"),
+    CANNOT_VOTE_OWN(40001, "不能赞同自己的回答"),
+    ALREADY_FAVORITED(40009, "已收藏过");
 
     private final int code;
     private final String msg;
