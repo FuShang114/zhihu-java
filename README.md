@@ -16,12 +16,18 @@
 
 | 课 | 内容 | 状态 |
 |----|------|------|
-| J1 | 项目骨架 + 统一响应体 Result<T> + /ping | 🚧 |
-| J2 | 用户注册/登录（BCrypt + JWT）+ MyBatis-Plus 落库 | ⬜ |
-| J3 | 提问/回答（Question/Answer 领域模型） | ⬜ |
-| J4 | 赞同/收藏（Vote/Favorite + 计数一致性） | ⬜ |
-| J5 | 业务模型性能优化（索引/缓存/分页） | ⬜ |
-| J6+ | 关注关系、双 Feed 流、通知、搜索热榜 → DDD 四层 → 微服务化 | ⬜ |
+| M0 | 项目骨架 + 统一响应体 Result<T> + /ping + E2E 测试基架 | ✅ |
+| M1 | 用户域：注册/登录/me（BCrypt + JJWT + 拦截器 + @CurrentUser） | ✅ |
+| M2 | 内容域：提问/回答（Question/Answer + 分页 + 冗余计数） | ✅ |
+| M3 | 互动域：赞同投票状态机（多态 votes 表）+ 收藏（两层夹/条目） | ✅ |
+| M4 | 业务模型性能优化（索引/缓存/分页/N+1/计数一致性） | ⬜ |
+| M5+ | 关注关系、双 Feed 流、通知、搜索热榜 → DDD 四层 → 微服务化 | ⬜ |
+
+## E2E 测试
+
+```bash
+mvn test    # 32 个端到端场景：真实 Spring Boot + 真实 MySQL（zhihu_test 库自动重建）
+```
 
 ## 全局约定
 
