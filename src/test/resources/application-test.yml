@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zhihu_test?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Zhihu2026
+  jpa:
+    hibernate:
+      ddl-auto: create-drop   # 测试库每轮 E2E 自动重建，不污染开发库 zhihu
+    open-in-view: false
+
+jwt:
+  secret: test-secret-0123456789-abcdefghijklmnop
+  ttl-hours: 24

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: zhihu-java
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zhihu?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Zhihu2026   # dev 占位；生产必须走环境变量注入（红线见 README）
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+server:
+  port: 8080
+
+jwt:
+  secret: dev-secret-change-me-please-rotate-in-prod  # HS256 需 >=32 字节
+  ttl-hours: 72
