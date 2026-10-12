@@ -1,0 +1,21 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### 红线：任何密钥/token 严禁提交 ###
+.secrets/
+*.local.yml
+*.local.properties
+application-local.yml
+
+### 日志与临时 ###
+*.log
+logs/
+.DS_Store
